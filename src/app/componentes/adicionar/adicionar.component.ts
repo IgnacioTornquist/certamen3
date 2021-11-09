@@ -33,7 +33,8 @@ export class AdicionarComponent implements OnInit {
       "ciudad": this.formulario.get("ciudad")?.value
     }];
     console.log(datos);
-    ListaClientes.push(datos);
+    ListaClientes.push(datos[0]);
+    console.log(ListaClientes);
   }
   
 }
