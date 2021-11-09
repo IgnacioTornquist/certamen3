@@ -1,0 +1,17 @@
+<ul  >
+    <li *ngFor="let cliente of ListaClientes">
+        <div *ngIf=" cliente.genero =='Hombre'">
+            <img id="imagenDestacada" src="../../../assets/imagen1.png">
+            <h2>{{cliente.nombre}}<br>{{cliente.pais}}, {{cliente.ciudad}}</h2>
+        </div>
+        <div *ngIf=" cliente.genero =='Mujer'">
+            <img id="imagenDestacada" src="../../../assets/imagen2.png">
+            <h2>{{cliente.nombre}}<br>{{cliente.pais}}, {{cliente.ciudad}}</h2>
+        </div>
+        <div *ngIf=" cliente.genero =='Otro'">
+            <img id="imagenDestacada" src="../../../assets/imagen3.png">
+            <h2>{{cliente.nombre}}<br>{{cliente.pais}}, {{cliente.ciudad}}</h2>
+        </div>
+
+    </li>
+</ul>

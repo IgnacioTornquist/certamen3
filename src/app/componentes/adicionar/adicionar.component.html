@@ -1,0 +1,53 @@
+<form [formGroup]="formulario" (ngSubmit)="validacion()" novalidate>
+    <ul>
+        <li>
+            <label>Nombre</label>
+            <br>
+            <input id="input1" type="text" formControlName="nombre">
+            <div *ngIf="formulario.controls['nombre'].invalid && (formulario.controls['nombre'].dirty || formulario.controls['nombre'].touched)" class="alert alert-danger">
+                <div id="mensaje" *ngIf="formulario.controls['nombre'].hasError('required')">
+                    * Nombre obligatorio
+                </div> 
+            </div>
+        </li>
+        <li>
+            <label>Apellido</label>
+            <br>
+            <input id="input1" type="text" formControlName="apellido">
+            <div *ngIf="formulario.controls['apellido'].invalid && (formulario.controls['apellido'].dirty || formulario.controls['apellido'].touched)" class="alert alert-danger">
+                <div id="mensaje" *ngIf="formulario.controls['apellido'].hasError('required')">
+                    * Apellido obligatorio
+                </div> 
+            </div>
+        </li>
+        <li>
+            <label>Genero</label>
+            <br>
+            <div id="opciones">
+                <input type="radio" name="genero" value="mujer">Mujer<br>
+                <input type="radio" name="genero" value="hombre">Hombre<br>
+                <input type="radio" name="genero" value="otro">Otro
+            </div>
+        </li>
+        <li>
+            <label>Pais</label>
+            <br>
+            <select id="opcion">
+                <option value="mujer">Chile</option>
+                <option value="hombre">Argentina</option>
+                <option value="otro">Brazil</option>
+            </select>
+        </li>
+        <li>
+            <label>Ciudad</label>
+            <br>
+            <input id="input1" type="text" formControlName="ciudad">
+            <div *ngIf="formulario.controls['ciudad'].invalid && (formulario.controls['ciudad'].dirty || formulario.controls['ciudad'].touched)" class="alert alert-danger">
+                <div id="mensaje" *ngIf="formulario.controls['ciudad'].hasError('required')">
+                    * Ciudad obligatoria
+                </div> 
+            </div>
+        </li>
+        <li><button class="btn" type="reset">Cancel</button><button type="submit" class="btn" [disabled]="formulario.invalid">Crear</button></li>
+    </ul>
+</form>

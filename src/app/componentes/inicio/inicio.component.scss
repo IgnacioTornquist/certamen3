@@ -1,0 +1,26 @@
+h1{
+    margin: 40px;
+    font-size:60px;
+}
+ul{
+    position:relative;
+    left: 1%;
+}
+img{
+    width: 140px;
+    height: 150px;
+}
+span{
+    font-size: 80px;
+    position: relative;
+    top: 30px;
+    margin: 2px;
+}
+a{
+    color: black;
+    font-size: xx-large;
+    margin: 20px;
+}
+.nav .nav-link.active, .nav .show > .nav-link {
+    color:lightskyblue;
+}

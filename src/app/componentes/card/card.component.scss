@@ -1,0 +1,28 @@
+ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    height: 50%;
+    margin: 20px;
+}
+li{
+    border: solid;
+    border-width: 3px;
+    margin: 25px;
+    width: 400px;
+    height: 110%;
+}
+div{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+h2{
+    margin: 20px;
+}
+img{
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+}
