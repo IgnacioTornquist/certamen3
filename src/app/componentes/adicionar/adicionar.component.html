@@ -24,18 +24,18 @@
             <label>Genero</label>
             <br>
             <div id="opciones">
-                <input type="radio" name="genero" value="mujer">Mujer<br>
-                <input type="radio" name="genero" value="hombre">Hombre<br>
-                <input type="radio" name="genero" value="otro">Otro
+                <input type="radio" name="genero" value="Mujer" formControlName="genero" >Mujer<br>
+                <input type="radio" name="genero" value="Hombre" formControlName="genero">Hombre<br>
+                <input type="radio" name="genero" value="Otro" formControlName="genero">Otro
             </div>
         </li>
         <li>
             <label>Pais</label>
             <br>
-            <select id="opcion">
-                <option value="mujer">Chile</option>
-                <option value="hombre">Argentina</option>
-                <option value="otro">Brazil</option>
+            <select id="opcion" formControlName="pais">
+                <option value="Chile">Chile</option>
+                <option value="Argentina">Argentina</option>
+                <option value="Brazil">Brazil</option>
             </select>
         </li>
         <li>
