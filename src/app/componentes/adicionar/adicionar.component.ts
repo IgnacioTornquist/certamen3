@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder,FormGroup, Validators} from '@angular/forms';
+import { ListaClientes } from '../../interfaces/clientes';
 
 @Component({
   selector: 'app-adicionar',
@@ -28,6 +29,7 @@ export class AdicionarComponent implements OnInit {
       "apellido": this.formulario.get("apellido")?.value,
       "ciudad": this.formulario.get("ciudad")?.value
     }];
+    ListaClientes.push(datos);
   }
   
 }
