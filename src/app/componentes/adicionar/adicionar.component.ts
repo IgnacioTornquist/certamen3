@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder,FormGroup, Validators} from '@angular/forms';
 import { ListaClientes } from '../../interfaces/clientes';
-
 @Component({
   selector: 'app-adicionar',
   templateUrl: './adicionar.component.html',
@@ -15,6 +14,8 @@ export class AdicionarComponent implements OnInit {
     this.formulario=this.Form.group({
        nombre:['',Validators.required],
        apellido:['',Validators.required],
+       genero:['',Validators.required],
+       pais:['',Validators.required],
        ciudad:['',Validators.required]
       }
     );
@@ -27,8 +28,11 @@ export class AdicionarComponent implements OnInit {
     let datos:any=[{
       "nombre": this.formulario.get("nombre")?.value,
       "apellido": this.formulario.get("apellido")?.value,
+      "genero": this.formulario.get("genero")?.value,
+      "pais": this.formulario.get("pais")?.value,
       "ciudad": this.formulario.get("ciudad")?.value
     }];
+    console.log(datos);
     ListaClientes.push(datos);
   }
   
